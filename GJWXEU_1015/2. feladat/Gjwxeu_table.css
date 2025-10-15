@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+}
+
+.table {
+    margin: 0 auto;
+}
+
+.table, .table td, .table th {
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+.sor1 {
+    background-color: lightgrey;
+    font-style: italic;
+    height: 50px;
+}
+
+.sor2 {
+    background-color: red;
+    height: 100px;
+}
+
+.sor3, .sor4 {
+    background-color: lightyellow;
+    height: 100px;
+}
+
+.sarga {
+    background-color: yellow;
+}
+
+.helyzet1 {
+    text-align: right;
+    vertical-align: top;
+}
+
+.helyzet2 {
+    vertical-align: bottom;
+}
+
+.helyzet3 {
+    text-align: center;
+}
+
+.oszlop {
+    width: 100px;
+}
