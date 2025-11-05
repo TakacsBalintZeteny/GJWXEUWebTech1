@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+
+    <style>
+        .grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 5rem;
+            width: 40rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        footer {
+            border-top: 4px solid gray;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            width: 37.5rem;
+            text-align: right;
+        }
+
+        div.grid>div {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        button {
+            width: 7rem;
+            height: 2.5rem;
+            line-height: 4;
+            overflow: hidden;
+
+            border: none;
+            border-radius: 0.5rem;
+            background-color: #bdf;
+            box-shadow: 0 0 0 0.125rem #000000bb, inset 0 0 0.25rem 0 #ffffffbb;
+        }
+
+        button:hover {
+            background-color: #9cf;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        Video lajátszása_Gjwxeu
+    </header>
+
+    <video src="gjwxeu_video.mp4" id="video" autoplay="false" controls width="600"></video>
+    
+    <div class="grid">
+        <div>
+            <button id="start" onclick="videoStart()">Indítás</button>
+            <button id="stop" onclick="videoStop()">Leállítás</button>
+        </div>
+        <div>
+            <button id="start/stop" onclick="videoStartStop()">Indítás/Lejátszás</button>
+        </div>
+        <div>
+            <button id="mute" onclick="videoMute()">Néma</button>
+            <button id="halk" onclick="videoHalk()">Halk</button>
+            <button id="loud" onclick="videoUnmute()">Hangos</button>
+        </div>
+        <div>
+            <button id="nagyonlassu" onclick="videoNagyonLassu()">Nagyon lassú</button>
+            <button id="lassu" onclick="videoLassu">Lassú</button>
+            <button id="normal" onclick="videoNormal()">Normál</button>
+            <button id="gyors" onclick="videoGyors()">Gyors</button>
+            <button id="nagyongyors" onclick="videoNagyonGyors()">Nagyon gyors</button>
+        </div>
+        <div>
+            <button id="befejez" onclick="videoEnded()">Befejeződött-e</button>
+            <button id="hossz" onclick="videoLength()">Video hossza</button>
+            <button id="pozicio" onclick="videoPosition()">Jelenlegi pozíció</button>
+        </div>
+    </div>
+
+    <footer>
+        Forrás: <a href="https://www.w3schools.com/html/html5_video.asp">https://www.w3schools.com/html/html5_video.asp</a>
+    </footer>
+
+    <script>
+        function videoStart()
+        {
+            var video = document.getElementById("video");
+            if (video.paused) {
+                video.play();
+            }
+        }
+
+        function videoStop()
+        {
+            var video = document.getElementById("video");
+            if (video.played) {
+                video.pause();
+            }
+        }
+
+        function videoStartStop()
+        {
+            var video = document.getElementById("video");
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function videoMute()
+        {
+            var video = document.getElementById("video");
+            video.muted = true;
+        }
+
+        function videoUnmute()
+        {
+            var video = document.getElementById("video");
+            video.muted = false;
+            video.volume = 1.0;
+        }
+
+        function videoHalk()
+        {
+            var video = document.getElementById("video");
+            video.muted = false;
+            video.volume = 0.1;
+        }
+
+        function videoNagyonLassu()
+        {
+            var video = document.getElementById("video");
+            video.playbackRate = 0.5;
+        }
+
+        function videoLassu()
+        {
+            var video = document.getElementById("video");
+            video.playbackRate = 0.75;
+        }
+
+        function videoNormal()
+        {
+            var video = document.getElementById("video");
+            video.playbackRate = 1.0;
+        }
+
+        function videoGyors()
+        {
+            var video = document.getElementById("video");
+            video.playbackRate = 1.5;
+        }
+
+        function videoNagyonGyors()
+        {
+            var video = document.getElementById("video");
+            video.playbackRate = 2.0;
+        }
+
+        function videoEnded() {
+            var video = document.getElementById("video");
+            var gomb = document.getElementById("befejez");
+            if (video.ended) {
+                gomb.textContent = "Igen";
+            } else {
+                gomb.textContent = "Nem";
+            }
+        }
+
+        function videoLength() {
+            var video = document.getElementById("video");
+            var gomb = document.getElementById("hossz");
+            gomb.textContent = video.duration.toFixed(2) + " mp";
+        }
+
+        function videoPosition() {
+            var video = document.getElementById("video");
+            var gomb = document.getElementById("pozicio");
+            gomb.textContent = video.currentTime.toFixed(2) + " mp";
+        }
+    </script>
+
+</body>
+
+</html>
