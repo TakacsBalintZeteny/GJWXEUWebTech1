@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JSON Text konvertálása JavaScript objektummá!</title>
+</head>
+<body>
+    <h1> JSON Text konvertálása JavaScript objektummá!</h1>
+    <div id="tartalom"></div>
+    <button type="button" onclick="beolvasas()">Konvertálás</button>
+    <script>
+        function beolvasas()
+        {
+            var gjwxeu = {"nev": "Takács Bálint Zétény", "iranyitoszam": 3500, "varos": "Miskolc", "egyetem": "Miskolci Egyetem"};
+
+            let obj = gjwxeu;
+
+            var tartalom =`
+            <p>Név: ${obj.nev}</p>
+            <p>Irányítószám: ${obj.iranyitoszam}</p>
+            <p>Város: ${obj.varos}</p>
+            <p>Egyetem: ${obj.egyetem}</p>
+            `;
+
+            document.getElementById("tartalom").innerHTML += tartalom;
+        }
+    </script>
+</body>
+</html>

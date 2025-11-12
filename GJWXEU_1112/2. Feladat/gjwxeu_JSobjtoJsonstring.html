@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS objektumot konvertálja JSON String.</title>
+</head>
+<body>
+    <h1>JS objektumot konvertálja JSON String.</h1>
+    <div id="tartalom"></div>
+    <button type="button" onclick="beolvasas()">Konvertálás</button>
+    <script>
+        function beolvasas()
+        {
+            var obj = {
+                "Egyetem": "Miskolci Egyetem",
+                "Város": "Miskolc",
+                "Irányítószám": "350",
+                "Név": "Takács Bálint Zétény"
+            };
+
+            var jsonString = JSON.stringify(obj);
+
+            document.getElementById("tartalom").textContent = jsonString;
+        }
+    </script>
+</body>
+</html>

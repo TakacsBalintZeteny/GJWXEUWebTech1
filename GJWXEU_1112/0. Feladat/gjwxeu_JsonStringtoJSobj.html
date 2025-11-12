@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON fájl feldolgozás, beolvasás - JavaScript-ben</title>
+</head>
+<body>
+    <h1>JSON fájl feldolgozás, beolvasás - JavaScript-ben</h1>
+    <h2>JSON:</h2>
+    <div id="tartalom"></div>
+    <button type="button" onclick="beolvasas()">JSON beolvasás</button>
+    <script>
+        function beolvasas()
+        {
+            var db = prompt("Adj meg egy számot, hogy mennyit szeretnél beolvasni: ");
+
+            for (var i = 0; i < db; i++) {
+                var nev = prompt((i+1) + ". Add meg a nevét: ");
+                var kiterjesztes = prompt((i+1) + ". Add meg a kiterjesztést: ");
+
+                var jsonString = `{"nev": "${nev}", "kiterjesztes": "${kiterjesztes}"}`;
+                var obj = JSON.parse(jsonString);
+
+                document.getElementById("tartalom").innerHTML += `${(i+1)}. Név: ${obj.nev}, kiterjesztés: ${obj.kiterjesztes} <br>`;
+            }
+        }
+    </script>
+</body>
+</html>

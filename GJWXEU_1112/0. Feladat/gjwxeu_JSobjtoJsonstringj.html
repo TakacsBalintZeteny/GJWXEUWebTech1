@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON fájl készítése - JavaScript-ben</title>
+</head>
+<body>
+    <h1>JSON fájl készítése - JavaScript-ben</h1>
+    <h2>JSON:</h2>
+    <div id="tartalom"></div>
+    <button type="button" onclick="beolvasas()">JSON generálás</button>
+    <script>
+        function beolvasas()
+        {
+            const files = [
+                { nev: "index", kiterjesztes: "html" },
+                { nev: "style", kiterjesztes: "css" },
+                { nev: "app", kiterjesztes: "js" }
+            ]
+
+            var jsonString = JSON.stringify(files);
+
+            document.getElementById("tartalom").innerHTML = jsonString;
+        }
+    </script>
+</body>
+</html>

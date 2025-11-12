@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cím</h1>
+    <div id="tartalom"></div>
+    <button type="button" onclick="beolvasas()">Konvertálás</button>
+    <script>
+        function beolvasas()
+        {
+            var jsonText = '{"Egyetem":"Miskolci Egyetem","Város":"Miskolc","Irányítószám":"3510","Név":"Takács Bálint Zétény"}';
+
+            var obj = JSON.parse(jsonText);
+
+            var html = `
+                <p>Egyetem: ${obj.Egyetem}</p>
+                <p>Város: ${obj.Város}</p>
+                <p>Irányítószám: ${obj["Irányítószám"]}</p>
+                <p>Név: ${obj.Név}</p>
+            `;
+            document.getElementById("tartalom").innerHTML = html;
+        }
+    </script>
+</body>
+</html>
