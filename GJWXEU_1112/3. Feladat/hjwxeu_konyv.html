@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON megvalósítása – JavaScript</title>
+</head>
+<body>
+    <h1>JSON megvalósítása – JavaScript</h1>
+
+    <h2>Könyvek listája:</h2>
+
+    <ul id="lista"></ul>
+
+    <script>
+        fetch("gjwxeu_konyv.json")
+            .then(res => res.json())
+            .then(adat => {
+                var lista = document.getElementById("lista");
+                var konyvek = adat.konyvek.konyv;
+
+                lista.innerHTML = konyvek
+                    .map(k => `<li><b>Szerző:</b> ${k.iro} <b>cim:</b> ${k.cim} <b>Kiadás éve:</b> ${k.kiadas}</li>`)
+                    .join("");
+            });
+    </script>
+</body>
+</html>
