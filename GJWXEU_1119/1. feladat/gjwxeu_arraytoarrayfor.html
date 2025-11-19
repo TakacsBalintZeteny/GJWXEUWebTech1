@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON beágyazott tömb – for ciklus</title>
+</head>
+<body>
+    <h1>Tömbökön belüli tömbök ciklusa</h1>
+
+    <div id="tartalom"></div>
+
+    <script>
+        const TBZObj = {
+            "name": "TBZ",
+            "age": 21,
+            "cars": [
+                { "name": "Toyota", "models": ["CHR", "Corolla", "Proace"] },
+                { "name": "Ford", "models": ["Kuga", "Mondeo", "Mustang"] },
+                { "name": "BMW", "models": ["320", "X3", "X5"] },
+                { "name": "Fiat", "models": ["500", "Panda", "Tipo"] }
+            ]
+        };
+
+        const div = document.getElementById("tartalom");
+
+        div.innerHTML = `<p><b>${TBZObj.name} (${TBZObj.age})</b><br>`;
+
+        for (var i = 0; i < TBZObj.cars.length; i++) {
+            var marka = TBZObj.cars[i];
+
+            var p = document.createElement("p");
+            p.innerHTML = `<b>${marka.name}</b>`;
+            div.appendChild(p);
+
+            var ul = document.createElement("ul");
+
+            for (var j = 0; j < marka.models.length; j++) {
+                var li = document.createElement("li");
+                li.textContent = marka.models[j];
+                ul.appendChild(li);
+            }
+
+            div.appendChild(ul);
+        }
+    </script>
+</body>
+</html>
