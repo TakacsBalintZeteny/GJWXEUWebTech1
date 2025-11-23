@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*HTML5 főbb elemei*/
+header {
+    background-color: #3a4f65;
+    height: 120px;
+}
+
+nav {
+    background-color: #5e92c4;
+    height: 66px;
+}
+
+article {
+    background-color: whitesmoke;
+    float: left;
+    width: 75%;
+}
+
+aside {
+    background-color: #b7ccd0;
+    float: right;
+    width: 25%;
+}
+
+footer {
+    background-color: #3a4f65;
+    height: 100px;
+    text-align: center;
+}
+
+
+
+/*Container-ek*/
+.container1 {
+    height: 2500px;
+}
+#footerMargin1 {
+    margin-top: 2500px;
+}
+
+.container2 {
+    height: 1250px;
+}
+
+#footerMargin2 {
+    margin-top: 1250px;
+}
+
+.container3 {
+    height: 1300px;
+}
+#footerMargin3 {
+    margin-top: 1300px;
+}
+
+.container4 {
+    height: 1300px;
+}
+#footerMargin4 {
+    margin-top: 1300px;
+}
+
+.container5 {
+    height: 1350px;
+}
+#footerMargin5 {
+    margin-top: 1350px;
+}
+
+.container6 {
+    height: 850px;
+}
+#footerMargin6 {
+    margin-top: 850px;
+}
+
+
+
+/*Főbb elemek gyerekei*/
+footer p {
+    padding: 7px;
+    color: #1e1e1e;
+}
+
+header h1 {
+    padding: 25px;
+    font-size: 50px;
+    display: inline-block;
+}
+
+header img {
+    height: 100px;
+    float: right;
+    padding: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 23px;
+    float: left;
+    padding: 7px 30px;
+    background-color: #31699e;
+    margin: 10px 15px;
+    border: 3px #1a5a96 solid;
+    border-radius: 10px;
+}
+
+nav ul li:hover {
+        background-color: #265c8e;
+        padding: 9px 35px;
+        margin: 7px 10px;
+        border: 3px #134f88 solid;
+        box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+}
+
+nav ul li:active {
+        background-color: #265c8e;
+        padding: 5px 25px;
+        margin: 10px 20px;
+        border: 3px #134f88 solid;
+        box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+
+
+/*Egyéb elemek*/
+form {
+    margin: 30px;
+}
+
+hr {
+    width: 500px;
+}
+
+
+
+/*Osztályok és Id-k*/
+#jelenOldal {
+    background-color: #367bbb;
+}
+
+.kutyaTabla2 {
+    margin: 75px auto;
+    font-size: 15px;
+    border: 3px black solid;
+    border-collapse: collapse;
+    text-align: center;
+    width: 75%;
+}
+
+.kutyaTabla2 td {
+    height: 40px;
+    background-color: #f0f0f0;
+}
+
+.kutyaTabla2 td, .kutyaTabla2 th {
+    border: 2px black solid;
+}
+
+.kutyaTabla2 th {
+    height: 50px;
+    font-size: 20px;
+    background-color: #718397;
+}
+
+.kutyaTabla2 .tulajdonsag {
+    text-align: left;
+    font-size: 20px;
+    background-color: #718397;
+    font-weight: bold;
+}
+.kutyaTabla2 .tulajdonsag2 {
+    text-align: center;
+}
+
+.focim {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.asideCim {
+    color: #333;
+    margin: 15px;
+
+    display: none;
+}
+
+.asideLista {
+    margin-top: 30px;
+    color: #333;
+    list-style:circle;
+    margin-left: 20px;
+    margin-right: 8px;
+    text-align: justify;
+
+    display: none;
+}
+
+.asideLista li {
+    margin-bottom: 25px;
+}
+
+.asideP {
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+
+    display: none;
+}
+
+.mainh2 {
+    color: #333;
+    margin: 30px 0 10px 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 30px;
+}
+
+.mainp {
+    text-align: justify;
+    margin: 0 3px;
+    text-indent: 25px;
+}
+
+.mainul {
+    margin: 0 0 10px 40px;
+}
+
+.mainul li a {
+    color: rgb(47, 53, 63);
+    text-decoration: none;
+}
+
+.mainul li a:hover {
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.mainimg {
+    width: 500px;
+    margin-left: 30%;
+}
+
+.gomb {
+    width: 100px;
+    height: 30px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 30px;
+}
+
+.gomb:hover {
+    box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.5);
+}
+
+.formGomb {
+    width: 100px;
+    height: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 200px;
+}

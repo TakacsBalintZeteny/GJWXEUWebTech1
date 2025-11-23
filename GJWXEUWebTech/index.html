@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Takács Bálint Zétény">
+    <meta name="description" content="Kedvenc kutyafajok">
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Képep és ikonok és videók/Paw_Print.png">
+    <title>Kedvenc kutyafajtáim</title>
+    <style>
+        .kutyaIkon {
+            cursor: pointer;
+        }
+
+        .kutyaTabla {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>A kedvenc kutyafajtáim</h1>
+        <img src="Képep és ikonok és videók/Icon_black_dog.png" alt="Ikon egy kutyáról" class="kutyaIkon">
+    </header>
+
+    <nav>
+        <ul>
+            <li id="jelenOldal"> <a href="index.html" target="_self"> <i class="fa fa-home" aria-hidden="true"></i> </a> </li>
+            <li> <a href="1tacsko.html" target="_self">Tacskó</a> </li>
+            <li> <a href="2dobermann.html" target="_self">Dobermann</a> </li>
+            <li> <a href="3rottweiler.html" target="_self">Rottweiler</a> </li>
+            <li> <a href="4pitbull.html" target="_self">Pitbull</a> </li>
+            <li> <a href="5tablazat.html" target="_self">Összehasonlítás</a> </li>
+        </ul>
+    </nav>
+
+    <article class="container1">
+        <h1 class="focim">A kutyák</h1>
+
+        
+        <section> <!--Táblázat-->
+        <table class="kutyaTabla">
+            <tr>
+                <td style="padding-right: 4px;"> <img src="Képep és ikonok és videók/tacsko1.jpg" alt="tacskó" style="width: 300px;" > </td>
+                <td> <img src="Képep és ikonok és videók/dobermann1.jpg" alt="dobermann" style="width: 300px;"> </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 4px;"> <img src="Képep és ikonok és videók/rottweiler1.jpg" alt="tacskó" style="width: 300px;"> </td>
+                <td> <img src="Képep és ikonok és videók/pitbull1.jpg" alt="tacskó" style="width: 300px;"> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <video src="Képep és ikonok és videók/dog_video.mp4" autoplay muted controls id="videoId" style="width: 606px;"></video>
+                </td>
+            </tr>
+        </table>
+        </section>
+
+        <div style="height: 100px;">
+
+            <button class="gomb" type="button" onclick="toggleVideo()"> <i class="fa fa-pause" aria-hidden="true"></i> / <i class="fa fa-play" aria-hidden="true"></i> </button>
+
+            <button class="gomb" type="button" onclick="startVideo()"> <i class="fa fa-fast-backward" aria-hidden="true"></i> </button>
+        
+        </div>
+
+        <section><!--Szöveg-->
+        <h2 class="mainh2">Miért épp a kutyák? – Bevezetés</h2>
+        <p class="mainp">
+            A kutyák az ember legjobb barátai – ezt a mondást szinte mindenki ismeri, és személyes tapasztalataim alapján teljes mértékben egyetértek vele. Ez a weboldal négy olyan kutyafajtát mutat be, amelyek számomra különösen kedvesek, akár a személyiségük, akár a külsejük, akár az intelligenciájuk miatt. Célom az, hogy egy informatív, mégis könnyen olvasható felületen keresztül ismertessem meg az érdeklődőkkel ezeket a fajtákat, miközben saját véleményemet és tapasztalataimat is megosztom.
+        </p>
+
+        <h2 class="mainh2">A kutyák szerepe az ember életében</h2>
+        <p class="mainp">
+            A kutyák már több ezer éve az ember társai. Nemcsak házőrzőként vagy vadászként segítettek minket, hanem érzelmi támaszként is megjelentek a mindennapjainkban. Napjainkban a legtöbb ember számára a kutya már családtag, akinek érzései, igényei és szoros kapcsolata van a gazdájával. A terápiás kutyák, vakvezetők, kereső-mentő ebek mind példái annak, milyen sokrétű és hasznos lehet egy jól képzett kutya jelenléte.
+        </p>
+
+        <h2 class="mainh2">Miért választottam ezt a témát?</h2>
+        <p class="mainp">
+            Egyrészt személyes érdeklődésből: gyerekkorom óta rajongok a kutyákért, és számos fajtát ismertem meg filmeken vagy saját tapasztalatokon keresztül. Másrészt azért is, mert a kutyák bemutatása kiváló lehetőséget ad arra, hogy strukturáltan dolgozzam fel az információkat, miközben gyakorolhatom a <span style="font-size: 18px; font-weight: bold;">HTML5</span> elemeinek használatát. Ez a beadandó tehát nemcsak témájában, hanem technikai kivitelezésében is illeszkedik a tantárgy céljaihoz.
+        </p>
+
+        <div class="grid">
+            <div>
+                <h2 class="mainh2">A 4 bemutatott kutyafaj</h2>
+                <ul class="mainul">
+                    <li> <a href="1tacsko.html" target="_self">Tacskó</a> </li>
+                    <li> <a href="2dobermann.html" target="_self">Dobermann</a> </li>
+                    <li> <a href="3rottweiler.html" target="_self">Rottweiler</a> </li>
+                    <li> <a href="4pitbull.html" target="_self">Pitbull</a> </li>
+                </ul>
+            </div>
+        
+            <div>
+                <h2 class="mainh2">A kevenc kutya tulajdonságaim:</h2>
+                <ul class="mainul">
+                    <li>Hűség</li>
+                    <li>Szeretetreméltóság</li>
+                    <li>Tanulékonyság</li>
+                    <li>Intelligencia</li>
+                    <li>Játékosság</li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <hr style="width: 1036px; margin-left: 10px; margin-top: 30px;">
+
+        <h2 class="mainh2">Szavazásra való jelentkezés</h2>
+        <p class="mainp" style="margin-left: 15px; margin-top: 15px; font-size: 20px;">Add meg a kutyád adatait:</p>
+        </section>
+
+        <section><!--Form-->
+        <form>
+            <label for="nev">Add meg a nevét: </label>
+            <input type="text" id="nev" name="nev">
+            <br><br><hr><br>
+            <label for="leiras">Adhatsz meg leírást: </label>
+            <textarea name="leiras" id="leiras"></textarea>
+            <br><br><hr><br>
+            <label for="faj">Add meg a fajtáját: </label>
+            <select name="faj" id="faj" required>
+                <option value="" selected>Válassz egyet...</option>
+                <option value="faj1">Faj1</option>
+                <option value="faj2">Faj2</option>
+                <option value="faj3">Faj3</option>
+                <option value="faj4">Faj4</option>
+            </select>
+            <br><br><hr><br>
+            <legend id="legen">Add meg a nemét:</legend>
+            <input type="radio" name="nem" id="fiu" value="fiu">
+            <label for="fiu" class="neme">Fiú</label>
+            <br>
+            <input type="radio" name="nem" id="lany" value="lany">
+            <label for="lany" class="neme">Lány</label>
+            <br><br><hr><br>
+            <label>Mit szeretsz benne:</label>
+            <br>
+            <input type="checkbox" name="szeret" id="elso" value="elso"> 
+            <label for="elso">Személyiség</label>
+            <br>
+            <input type="checkbox" name="szeret" id="masodik" value="masodik"> 
+            <label for="elso">Viselkedés</label>
+            <br>
+            <input type="checkbox" name="szeret" id="harmadik" value="harmadik"> 
+            <label for="elso">Hűség</label>
+            <br><br><hr><br>
+            <label for="szin">Add meg a színét: </label>
+            <input type="color" id="szin" name="szin" value="#ff0000">
+            <br><br><hr><br>
+            <label for="szuletes">Mikor születet?</label>
+            <input type="date" id="szuletes" name="szuletes">
+            <br><br><hr><br>
+            <button class="formGomb" type="button" id="ellenorzes" class="ellenorzoGomb">Ellenőrzés</button>
+            <button class="formGomb" type="button" id="bekuld" style="display: none;">Beküldés</button>
+        </form>
+        </section>
+
+    </article>
+
+    <aside class="container1">
+        <h2 class="asideCim">Érdekességek: </h2>
+        <ul class="asideLista">
+            <li>A kutyák orrlenyomata egyedi, mint az emberek ujjlenyomata. A tudósok képesek azonosítani a kutyát az orr mintázata alapján!</li>
+            <li>A leggyorsabb kutya a világon az agár. Akár 70 km/h sebességgel is tud futni.</li>
+            <li>A kutyák hallása négyszer jobb, mint az embereké. Ezért hallják meg előbb a postást, mint mi... vagy a jutifalat zacskó zörgését. 😄</li>
+        </ul>
+        <p class="asideP">„A kutyák nem az egész életünket jelentik, de ők teszik teljessé azt.” <i style="font-size: 15px; color: #666666;">— Roger Caras (állatvédő)</i> </p>
+    </aside>
+
+    <footer id="footerMargin1">
+        <p>Elérhetőség <i class="fa fa-envelope" aria-hidden="true"></i> : valami@gmail.com</p>
+        <p>&copy; 2025 Készítette: Takács Bálint Zétény. Minden jog fenntartva.</p>
+        <p>A tartalom szabadon felhasználható, de kérlek, hivatkozz az oldalra!</p>
+    </footer>
+    
+    <script src="app.js"></script>
+
+</body>
+
+</html>
