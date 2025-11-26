@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery számológép</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        #doboz {
+            background: #eef3fb;
+            width: 280px;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="text"] {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        #eredmeny {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="doboz">
+    <h3>jQuery feladat</h3>
+    <p>Adjon meg két egész számot!</p>
+
+    A = <input type="text" id="a"><br>
+    B = <input type="text" id="b"><br><br>
+
+    <input type="radio" name="muv" value="szorzas"> A * B <br>
+    <input type="radio" name="muv" value="osztas"> A / B <br>
+    <input type="radio" name="muv" value="plusz"> A + B <br>
+    <input type="radio" name="muv" value="minusz"> A - B <br><br>
+
+    <button id="szamol">Számol</button>
+
+    <span>Eredmény: </span><span id="eredmeny"></span>
+</div>
+
+<script src="jquery-3.7.1.js"></script>
+<script src="Gjwxeu_6.js"></script>
+
+</body>
+</html>

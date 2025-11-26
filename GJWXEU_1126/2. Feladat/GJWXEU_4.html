@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery feladatok</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        #urlap {
+            background: #c7d7ec;
+            padding: 20px;
+            width: 300px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .gombsor {
+            margin: 20px 0;
+        }
+
+        button {
+            margin-right: 8px;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JQuery feladatok</h1>
+
+    <p class="szoveg"><b>A JQuery egy JavaScript programozói könyvtár, amelyet John Resig kezdett fejleszteni.</b></p>
+    <p class="szoveg">Elterjedtnek tekinthető, segítségével könnyen bejárható egy HTML oldal DOM-ja.</p>
+    <p class="szoveg">Effekteket és animációkat adhatunk HTML elemeinkhez. Számtalan plugint írtak hozzá.</p>
+
+    <div class="gombsor">
+        <button id="pHide">Elrejti</button>
+        <button id="pShow">Megjelenít</button>
+        <button id="pToggle">Elrejt/Megjelenít</button>
+    </div>
+
+    <div id="urlap">
+        <h2>Űrlap</h2>
+        <label>Név:</label><br>
+        <input type="text"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email"><br><br>
+
+        <label>Jelszó:</label><br>
+        <input type="password"><br><br>
+
+        <button>Jelentkezés</button>
+    </div>
+
+    <div class="gombsor">
+        <button id="op01">Áttetszőség = 0.1</button>
+        <button id="op05">Áttetszőség = 0.5</button>
+        <button id="op08">Áttetszőség = 0.8</button>
+        <button id="uHide">Űrlap elrejtése</button>
+        <button id="uShow">Űrlap megjelenítése</button>
+        <button id="uToggle">Űrlap elrejti/megjeleníti</button>
+    </div>
+
+    <script src="jquery-3.7.1.js"></script>
+    <script src="4.js"></script>
+</body>
+</html>
