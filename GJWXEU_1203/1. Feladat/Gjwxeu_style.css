@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#terulet {
+    width: 350px;
+    background: #c5c8e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.kartya {
+    background: #c5c8e0;
+    padding: 20px;
+    width: 300px;
+}
+
+.kartya h2 {
+    margin-top: 0;
+}
+
+b {
+    font-weight: bold;
+}

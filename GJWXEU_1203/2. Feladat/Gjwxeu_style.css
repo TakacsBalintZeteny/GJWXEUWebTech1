@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#terulet {
+    width: 450px;
+    padding: 20px;
+    background: #d5def5;
+    margin-top: 20px;
+}
+
+.kartya {
+    background: #c8cbe6;
+    padding: 15px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
