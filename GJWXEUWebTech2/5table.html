@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Takács Bálint Zétény">
+    <meta name="description" content="Kedvenc kutyafajok">
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images and icons and videos/Paw_Print.png">
+    <title>Kedvenc kutyafajtáim</title>
+        <style>
+        .dogIcon {
+            cursor: pointer;
+        }
+
+        #eredmeny2 > * {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>A kedvenc kutyafajtáim</h1>
+        <img src="Images and icons and videos/Icon_black_dog.png" alt="Ikon egy kutyáról" class="dogIcon">
+    </header>
+
+    <nav>
+        <ul>
+            <li> <a href="index.html" target="_self"> <i class="fa fa-home" aria-hidden="true"></i> </a> </li>
+            <li> <a href="1dachshund.html" target="_self">Tacskó</a> </li>
+            <li> <a href="2dobermann.html" target="_self">Dobermann</a> </li>
+            <li> <a href="3rottweiler.html" target="_self">Rottweiler</a> </li>
+            <li> <a href="4pitbull.html" target="_self">Pitbull</a> </li>
+            <li id="thisPage"> <a href="5table.html" target="_self">Összehasonlítás</a> </li>
+        </ul>
+    </nav>
+
+    <article class="container6">
+        <h1 class="headline">A kutyák összehasonlítása</h1>
+
+        
+        <section> <!--Táblázat-->
+        <table class="dogTable2">
+            <tr>
+                <th>Tulajdonság</th>
+                <th>Tacskó</th>
+                <th>Dobermann</th>
+                <th>Rottweiler</th>
+                <th>Pitbull</th>
+            </tr>
+            <tr>
+                <td class="property"><b>Eredet</b></td>
+                <td>Németország</td>
+                <td>Németország</td>
+                <td>USA</td>
+                <td>Németország</td>
+            </tr>
+            <tr>
+                <td class="property"><b>Méret</b></td>
+                <td>Kistestű(5-14kg)</td>
+                <td>Nagytestű(30-45kg)</td>
+                <td>Közepestestű(18-30kg)</td>
+                <td>Nagytestű(35-60kg)</td>
+            </tr>
+            <tr>
+                <td class="property"><b>Marmagasság</b></td>
+                <td id="firstDogHeight">20-27cm (átlag: 24)</td> <!--20-27cm-->
+                <td id="secondDogHeight">63-72cm (átlag: 67)</td> <!--63-72cm-->
+                <td id="thirdDogHeight">43-53cm (átlag: 48)</td> <!--43-53cm-->
+                <td id="fourthDogHeight">56-68cm (átlag: 62)</td> <!--56-68cm-->
+            </tr>
+            <tr>
+                <td class="property"><b>Testfelépítés</b></td>
+                <td>Hosszú test, rövid lábak</td>
+                <td>Izmos, karcsú</td>
+                <td>Izmos, tömör</td>
+                <td>Erőteljes, zömök</td>
+            </tr>
+            <tr>
+                <td class="property"><b>Szőrzet</b></td>
+                <td>Rövid, szálkás vagy hosszú</td>
+                <td>Rövid, fényes</td>
+                <td>Rövid, sima</td>
+                <td>Rövid, sűrű</td>
+            </tr>
+            <tr>
+                <td class="property"><b>Élettartam</b></td>
+                <td>12-16 év</td>
+                <td>10-13 év</td>
+                <td>12-15 év</td>
+                <td>9-11 év</td>
+            </tr>
+            <tr>
+                <td class="property"><b>Mozgásigény</b></td>
+                <td>Közepes</td>
+                <td>Nagyon magas</td>
+                <td>Magas</td>
+                <td>Magas</td>
+            </tr>
+        </table>
+
+        <label for="species">Faj:</label>
+        <input type="text" id="species" name="species" style="margin: 8px;">
+        <label for="source">Származás:</label>
+        <input type="text" id="source" name="source" style="margin: 8px;">
+        <label for="size">Méret:</label>
+        <input type="text" id="size" name="size" style="margin: 8px;">
+        <label for="high">Marmagasság: (formátum: (átlag: xx))</label>
+        <input type="text" id="high" name="high" style="margin: 8px;">
+        <label for="body">Testfelépítés:</label>
+        <input type="text" id="body" name="body" style="margin: 8px;">
+        <label for="hairs">Szőrzet:</label>
+        <input type="text" id="hairs" name="hairs" style="margin: 8px;">
+        <label for="live">Élettartam:</label>
+        <input type="text" id="live" name="live" style="margin: 8px;">
+        <label for="moving">Mozgásigény:</label>
+        <input type="text" id="moving" name="moving" style="margin: 8px;">
+        <button type="button" class="formButton" id="ok" onclick="insert()">Ok</button>
+        <button type="button" class="formButton" id="out" onclick="writing_out2()" style="display: none;">Kiir</button>
+        <button type="button" class="formButton" id="ajax" onclick="ajax()">AJAX beolvasás</button>
+
+
+        <div id="results" style="width: 500px; text-align: center; margin: 25px auto;"></div>
+        <div id="results2" style="width: 500px; text-align: center; margin: 25px auto;"></div>
+        </section>
+
+    </article>
+
+    <aside class="container6">
+        <h2 class="asideTitle">Érdekességek: </h2>
+        <ul class="asideList">
+            <li>A tacskókat eredetileg borzvadászatra tenyésztették („Dachshund” = borzkutya németül). Hosszú testük és rövid lábuk pontosan azért alakult ki, hogy beférjenek a föld alatti járatokba.</li>
+            <li>A dobermann fajtát egy német adóbehajtó, Karl Friedrich Dobermann hozta létre az 1800-as évek végén, hogy legyen egy hűséges, de félelmet keltő védelmező kutyája a munkájához.</li>
+            <li>Bár sokan „veszélyes” fajtáknak tartják őket(pitbull és rottweiler), kutatások bizonyítják, hogy jól nevelt és szocializált példányok ugyanolyan barátságosak és családszeretők, mint bármely más fajta. A viselkedést sokkal inkább a nevelés és környezet befolyásolja, mint a fajta.</li>
+        </ul>
+        <p class="asideP">„A kutya az egyetlen a világon, aki jobban szeret téged, mint saját magát.” <i style="font-size: 15px; color: #666666;">— Josh Billings</i> </p>
+    </aside>
+
+    <footer id="footerMargin6">
+        <p>Elérhetőség <i class="fa fa-envelope" aria-hidden="true"></i> : valami@gmail.com</p>
+        <p>&copy; 2025 Készítette: Takács Bálint Zétény. Minden jog fenntartva.</p>
+        <p>A tartalom szabadon felhasználható, de kérlek, hivatkozz az oldalra!</p>
+    </footer>
+    
+    <script src="app.js"></script>
+
+</body>
+
+</html>
